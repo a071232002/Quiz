@@ -6,6 +6,7 @@ import java.util.Map;
 public class T0013RomanToInteger {
     public static void main(String[] args) {
         System.out.println((romanToInt2("III")));
+        System.out.println((romanToInt3("III")));
     }
 
     public static int romanToInt(String s) {
@@ -74,5 +75,30 @@ public class T0013RomanToInteger {
             }
         }
         return result;
+    }
+
+    public static int romanToInt3(String s) {
+        int num = 0;
+        int ans = 0;
+        int temp = 0;
+        for (int i= s.length() - 1; i >= 0; i--){
+            num = switch (s.charAt(i)) {
+                case 'I' -> 1;
+                case 'V' -> 5;
+                case 'X' -> 10;
+                case 'L' -> 50;
+                case 'C' -> 100;
+                case 'D' -> 500;
+                case 'M' -> 1000;
+                default -> num;
+            };
+            if (num < temp){
+                ans -= num;
+            } else {
+                ans += num;
+            }
+            temp = num;
+        }
+        return ans;
     }
 }
