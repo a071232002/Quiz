@@ -1,4 +1,4 @@
-package paiza.rankb;
+package com.quiz.paiza.rank.b;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package paiza.rankc;
+package com.quiz.paiza.rank.c;
 
 import java.time.Duration;
 import java.time.LocalTime;
