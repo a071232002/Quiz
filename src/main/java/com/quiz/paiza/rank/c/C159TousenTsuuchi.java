@@ -18,7 +18,7 @@ public class C159TousenTsuuchi {
         String[] number = thirdLine.split(" ");
         Map<Integer, String> map = new HashMap<>();
         for (int i = 0; i < number.length; i++) {
-            map.put(i+1, number[i]);
+            map.put(i + 1, number[i]);
         }
 
         List<Integer> matchingKeys = new ArrayList<>();
