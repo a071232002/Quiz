@@ -10,7 +10,6 @@ public class B155SutanpuAato {
         String str = sc.nextLine();
         String[] parts = str.split(" ");
         int stampH = Integer.parseInt(parts[0]);
-        int stampW = Integer.parseInt(parts[1]);
         int stampQty = Integer.parseInt(parts[2]);
 
         List<String[][]> list = new ArrayList<>();
@@ -27,9 +26,9 @@ public class B155SutanpuAato {
         int masuW = Integer.parseInt(size[1]);
         int[][] masuArr = new int[masuH][masuW];
         for(int i = 0; i < masuH; i++) {
-            String[] stampPikckNums = sc.nextLine().split(" ");
+            String[] stampPickNumsNums = sc.nextLine().split(" ");
             for(int j = 0; j < masuW; j++) {
-               masuArr[i][j] = Integer.parseInt(stampPikckNums[j]);
+               masuArr[i][j] = Integer.parseInt(stampPickNumsNums[j]);
             }
         }
 
@@ -41,7 +40,7 @@ public class B155SutanpuAato {
                     String[][] target = list.get(pickIndex);
                     sb.append(target[k][0]);
                 }
-                System.out.println(sb.toString());
+                System.out.println(sb);
                 sb.setLength(0);
             }
         }
